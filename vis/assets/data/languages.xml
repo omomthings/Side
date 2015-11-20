@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+    <language name="fr">
+        <string key="Nouveau jeu" value="Nouveau jeu"/>
+        <string key="Scores" value="Scores"/>
+        <string key="Options" value="Options"/>
+    </language>
+
+
+    <language name="en">
+        <string key="Nouveau jeu" value="New game"/>
+        <string key="Scores" value="Scores"/>
+        <string key="Options" value="Options"/>
+    </language>
+</languages>

@@ -1,0 +1,62 @@
+
+cache.png
+size: 2048,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+along
+  rotate: false
+  xy: 2, 16
+  size: 607, 85
+  orig: 607, 85
+  offset: 0, 0
+  index: -1
+border
+  rotate: false
+  xy: 2, 103
+  size: 1213, 132
+  orig: 1213, 132
+  offset: 0, 0
+  index: -1
+corner
+  rotate: false
+  xy: 1539, 20
+  size: 258, 215
+  orig: 258, 215
+  offset: 0, 0
+  index: -1
+finish
+  rotate: false
+  xy: 1799, 150
+  size: 188, 85
+  orig: 188, 85
+  offset: 0, 0
+  index: -1
+ground 1
+  rotate: false
+  xy: 1217, 22
+  size: 320, 213
+  orig: 320, 213
+  offset: 0, 0
+  index: -1
+small corner
+  rotate: false
+  xy: 1799, 40
+  size: 129, 108
+  orig: 129, 108
+  offset: 0, 0
+  index: -1
+third along
+  rotate: false
+  xy: 611, 16
+  size: 200, 85
+  orig: 200, 85
+  offset: 0, 0
+  index: -1
+top
+  rotate: false
+  xy: 2, 2
+  size: 85, 12
+  orig: 85, 12
+  offset: 0, 0
+  index: -1
