@@ -8,7 +8,7 @@ import com.badlogic.gdx.math.Vector2;
  *
  * Created by omaro on 14/11/2015.
  */
-public class ViewComponent extends Component {
+public class ViewSightComponent extends Component {
     public Vector2 direction;
     public Circle circle;
     public int radius;
