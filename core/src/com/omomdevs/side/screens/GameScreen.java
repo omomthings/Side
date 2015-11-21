@@ -23,54 +23,20 @@ import com.omomdevs.side.utils.Loader;
 public class GameScreen implements Screen{
     //TODO this
 
-    final Side side;
-    EmptyScene scene;
-    SpriteBatch batch;
-    AdvancedVisAssetManager advancedVisAssetManager;
-
-
-
     public GameScreen (Side side){
-        this.side=side;
-        batch=new SpriteBatch();
-        advancedVisAssetManager=new AdvancedVisAssetManager("scene/lvlTest",1,batch);
     }
     @Override
     public void show() {
-        Loader.EmptySceneParameter parameter=new Loader.EmptySceneParameter();
-        parameter.systems.addAll(new RayHandlerSystem(),new LightSystem(),new CameraSystem());
-        parameter.managers.addAll(new UtilsManager(),new RayHandlerManager(),new LightManager());
-
-        RuntimeConfiguration configuration=new RuntimeConfiguration();
-        configuration.useBox2dDebugRenderer=true;
-        advancedVisAssetManager.getSceneLoader().setRuntimeConfig(configuration);
-
-        advancedVisAssetManager.enableFreeType(new FreeTypeFontProvider());
-
-        scene=advancedVisAssetManager.loadNow(parameter);
     }
 
-    long t;
     @Override
     public void render(float delta) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-             scene.render();
-
-        if (Gdx.input.isKeyJustPressed(Input.Keys.P)) {
-            t = TimeUtils.millis();
-            advancedVisAssetManager.loadPreviousScene();
-            Gdx.app.debug("prev time", TimeUtils.timeSinceMillis(t) + "ms");
-        }
-        if (Gdx.input.isKeyJustPressed(Input.Keys.N)) {
-            t = TimeUtils.millis();
-            advancedVisAssetManager.loadNextScene();
-            Gdx.app.debug("next time", TimeUtils.timeSinceMillis(t) + "ms");
-        }
     }
 
     @Override
     public void resize(int width, int height) {
-        scene.resize(width,height);
+
     }
 
     @Override
@@ -91,9 +57,5 @@ public class GameScreen implements Screen{
 
     @Override
     public void dispose() {
-        batch.dispose();
-        if (advancedVisAssetManager!=null)
-            advancedVisAssetManager.dispose();
-        Gdx.app.log("GameScreen","dispose()");
     }
 }
